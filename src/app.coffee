@@ -9,3 +9,5 @@ deviceWidth = device.screen.width
 
 print "Device height: #{deviceHeight}"
 print "Device width: #{deviceWidth}"
+
+app = Framer.Importer.load(“app.framer/imported/app@1x”)
