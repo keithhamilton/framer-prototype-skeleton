@@ -1,13 +1,11 @@
-device = new Framer.DeviceView()
+util = require "util"
+{Firebase} = require "firebase"
 
-device.setupContext()
-device.deviceType = "google-nexus-6p"
-device.contentScale = 1
+db = new Firebase
+  projectID: # Project Settings -> Database -> Copy database name
+  secret: # Project Settings -> Database -> Secret for database/project
+  server: # will be output when project is run vial `gulp`
 
-deviceHeight = device.screen.height
-deviceWidth = device.screen.width
+device = util.device_setup()
 
-print "Device height: #{deviceHeight}"
-print "Device width: #{deviceWidth}"
-
-app = Framer.Importer.load(“app.framer/imported/app@1x”)
+#app = Framer.Importer.load(“sketch/app.framer/imported/app@1x”)
